@@ -1,0 +1,7 @@
+<h2>Trading Monitor Dashboard</h2>
+<div *ngFor="let script of scripts">
+  <h3>{{script.symbol}}</h3>
+  <p>SMA Period: {{script.SMAperiod}}</p>
+  <p>Volume Multiplier: {{script.volumeMultiplier}}</p>
+  <p>Auto Execute: {{script.autoExecute}}</p>
+</div>

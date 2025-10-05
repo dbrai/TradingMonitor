@@ -1,0 +1,18 @@
+ .portfolio-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+}

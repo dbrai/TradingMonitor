@@ -1,0 +1,27 @@
+ {
+  "startingBalance": 50,
+  "maxOpenTrades": 3,
+  "tradeFraction": 0.2,
+  "leverage": 2,
+  "scripts": [
+    {
+      "id": "smaVolume1",
+      "symbol": "BTCUSDT",
+      "SMAperiod": 20,
+      "volumeMultiplier": 1.5,
+      "targetPercent": 0.6,
+      "stopLossPercent": 0.3,
+      "autoExecute": false
+    },
+    {
+      "id": "smaVolume2",
+      "symbol": "ETHUSDT",
+      "SMAperiod": 15,
+      "volumeMultiplier": 1.2,
+      "targetPercent": 0.8,
+      "stopLossPercent": 0.4,
+      "autoExecute": false
+    }
+  ]
+}
+

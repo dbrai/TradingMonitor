@@ -1,0 +1,29 @@
+ 
+<div class="portfolio-card">
+  <h2>Portfolio</h2>
+  <p><strong>Total Balance:</strong> {{balance | number:'1.2-2'}}</p>
+  <p><strong>Free Balance:</strong> {{freeBalance | number:'1.2-2'}}</p>
+  <p><strong>Daily PnL:</strong> {{dailyPnL | number:'1.2-2'}}</p>
+
+  <h3>Open Trades</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Side</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trade of openTrades">
+        <td>{{trade.symbol}}</td>
+        <td>{{trade.side}}</td>
+        <td>{{trade.price | number:'1.2-2'}}</td>
+        <td>{{trade.amount | number:'1.2-2'}}</td>
+        <td>{{trade.time | date:'shortTime'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

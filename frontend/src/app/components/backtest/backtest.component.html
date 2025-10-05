@@ -1,0 +1,29 @@
+<div class="backtest-card">
+  <h2>Backtest</h2>
+
+  <label>Symbol:
+    <select [(ngModel)]="symbol">
+      <option *ngFor="let s of scripts" [value]="s.symbol">{{s.symbol}}</option>
+    </select>
+  </label>
+
+  <label>Script:
+    <select [(ngModel)]="scriptId">
+      <option *ngFor="let s of scripts" [value]="s.id">{{s.id}}</option>
+    </select>
+  </label>
+
+  <label>Start Date: <input type="date" [(ngModel)]="startDate"></label>
+  <label>End Date: <input type="date" [(ngModel)]="endDate"></label>
+
+  <button (click)="runBacktest()">Run Backtest</button>
+
+  <div *ngIf="result">
+    <h3>Results</h3>
+    <p><strong>Final Balance:</strong> {{result.finalBalance}}</p>
+    <p><strong>Trades:</strong></p>
+    <ul>
+      <li *ngFor="let t of result.trades">{{t.symbol}} - {{t.side}} @ {{t.price | number:'1.2-2'}} Amount: {{t.amount}}</li>
+    </ul>
+  </div>
+</div>
